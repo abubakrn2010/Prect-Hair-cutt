@@ -1,26 +1,16 @@
-import Card from "./Components/Card";
+import React,{useState} from 'react'
 
-
-const App2 = () => {
+const App =()=> {
+  const [cnt,setCnt]=useState(0)
   return (
     <div>
-      React 
-
-      <h1>
-        Cards 
-      </h1>
-    
-    <Card tittle/>
-
-    <Card tittle='Abubakr' name={16}>
-        <div>
-            <p>123456</p>
-        </div>
-    </Card>
-
-
+      <h1>{cnt}</h1>
+      <button onClick={()=>setCnt(cnt+1)}>+</button>
+      <button onClick={()=>setCnt(cnt-1)}>-</button>
+      <button onClick={()=>setCnt(0)}>Reset</button>
     </div>
   )
 }
 
-export default App2
+
+export default App
